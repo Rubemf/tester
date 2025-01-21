@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Dias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+        }
+        h1 {
+            color: #ff69b4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nome do Casal: David e Girnele</h1>
+    <p>Vocês estão juntos há:</p>
+    <h2 id="contador"></h2>
+
+    <script>
+        // Data de início do relacionamento
+        const startDate = new Date("2020-01-01"); // Substitua pela data correta
+        const today = new Date();
+        
+        // Calcula a diferença em dias
+        const diffTime = Math.abs(today - startDate);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+        // Mostra no contador
+        document.getElementById("contador").textContent = `${diffDays} dias`;
+    </script>
+</body>
+</html>
